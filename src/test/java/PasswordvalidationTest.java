@@ -8,19 +8,15 @@ class PasswordvalidationTest {
 
 	@Test
 	void isPasswordLengthGreaterThenEight_whenPasswordHasAtLeastEightDigits_ThenPasswordIsStrong() {
-		System.out.println("First Test: " + "isPasswordLengthGreaterThenEight_whenPasswordHasAtLeastEightDigits_ThenPasswordIsStrong");
 		// minimun lenght of 8 digits
 		//given
 		String password = "helloWorld";
-		System.out.println("Password is: " + password);
 		boolean lengthok = true;
 		
 		//when
 		
 		boolean result = Passwordvalidation.isPasswordLengthGreaterThenEight(password);
-		if (result == true) {
-			System.out.println("The given password is strong!");
-		}
+		
 		
 		//then
 		assertEquals(lengthok, result);
@@ -28,21 +24,14 @@ class PasswordvalidationTest {
 	
 	@Test
 	void isPasswordLengthSmallerThenEight_whenPasswordHasLessThenEightDigits_ThenPasswordIsWeak() {
-		
-		System.out.println("Second Test: " + "isPasswordLengthSmallerThenEight_whenPasswordHasLessThenEightDigits_ThenPasswordIsWeak");
 		// minimun lenght of 8 digits
 		//given
 		String password = "hello";
-		System.out.println("Password is: " + password);
 		boolean lengthok = false;
 		
 		//when
 		
 		boolean result = Passwordvalidation.isPasswordLengthGreaterThenEight(password);
-		if (result == false) {
-			System.out.println("The given password is weak!");
-		}
-		
 		//then
 		assertEquals(lengthok, result);
 	}
